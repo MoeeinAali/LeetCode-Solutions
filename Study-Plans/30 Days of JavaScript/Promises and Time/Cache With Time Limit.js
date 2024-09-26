@@ -42,7 +42,7 @@ TimeLimitedCache.prototype.count = function () {
 };
 
 
-const timeLimitedCache = new TimeLimitedCache()
-timeLimitedCache.set(1, 42, 1000); // false
-console.log(timeLimitedCache.get(1)) // 42
-console.log(timeLimitedCache.count()) // 1
+// const timeLimitedCache = new TimeLimitedCache()
+// timeLimitedCache.set(1, 42, 1000); // false
+// console.log(timeLimitedCache.get(1)) // 42
+// console.log(timeLimitedCache.count()) // 1
