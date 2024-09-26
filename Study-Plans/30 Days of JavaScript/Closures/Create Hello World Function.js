@@ -8,8 +8,3 @@ var createHelloWorld = function () {
     };
 };
 
-/**
- * const f = createHelloWorld();
- * f(); // "Hello World"
- */
-
