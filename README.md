@@ -20,7 +20,7 @@ Primary language: **TypeScript**
 | 8 | [Trees — DFS / BFS](problemset/Trees/) | 0/5 | tree recursion, level order | `Trees` |
 | 9 | [Heap / Priority Queue](problemset/Heap/) | 0/5 | min vs max heap, top-K | `Heap` |
 | 10 | [Graphs](problemset/Graphs/) | 0/5 | DFS, BFS, topological sort | `Graphs` |
-| 11 | [Dynamic Programming](problemset/Dynamic-Programming/) | 5/5 | subproblems, memo / tabulation | `Dynamic-Programming` |
+| 11 | [Dynamic Programming](problemset/Dynamic-Programming/) | 11 | subproblems, memo / tabulation | `Dynamic-Programming` |
 
 ## Repository Structure
 

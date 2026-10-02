@@ -41,6 +41,16 @@ Maintain a window over a subarray/substring and grow or shrink it to keep the pr
 
 ---
 
+### 209 — Minimum Size Subarray Sum
+
+**Problem:** Positive integers array and target `t`. Smallest length of a contiguous subarray whose sum is ≥ `t`. Return 0 if none.
+
+**Approach:** Expand `right` adding to a running sum. While `sum >= t`, update min length and shrink from `left` (subtract `nums[left]`). Classic minimum window on a numeric constraint.
+
+**Complexity:** O(n) time, O(1) space.
+
+---
+
 ### 424 — Longest Repeating Character Replacement · [sol](424.%20Longest%20Repeating%20Character%20Replacement/)
 
 **Problem:** Longest substring where you can change at most `k` characters so the whole substring becomes one letter.

@@ -59,6 +59,16 @@ Binary search over a sorted space — not only finding an element in an array, b
 
 **Complexity:** O(log n) time, O(1) space.
 
+---
+
+### 875 — Koko Eating Bananas
+
+**Problem:** Piles of bananas and `h` hours. Koko eats at speed `k` bananas/hour (one pile per hour, leftover takes a full hour). Find the **minimum** `k` so she finishes all piles in ≤ `h` hours.
+
+**Approach:** Binary search on answer. Search `k` in `[1, max(piles)]`. Feasibility: hours needed = `sum(ceil(pile / k)) ≤ h`. If feasible, try smaller `k` (`right = mid`); else `left = mid + 1`.
+
+**Complexity:** O(n log M) time (M = max pile), O(1) space.
+
 ## Tip
 
 Do not stop at classic binary search. **875 (Koko)** is the textbook binary-search-on-answer problem — a pattern that shows up in many Hard questions too.
