@@ -1,3 +1,6 @@
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 function characterReplacement(s: string, k: number): number {
   const counts = new Array(26).fill(0);
   function getIndex(str: string): number {
@@ -23,7 +26,3 @@ function characterReplacement(s: string, k: number): number {
 
   return maxLength;
 }
-
-s = "AABABBA";
-k = 1;
-console.log(characterReplacement(s, k));

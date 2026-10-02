@@ -1,3 +1,6 @@
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 function minWindow(s: string, t: string): string {
   const sLength = s.length;
   const tLength = t.length;
