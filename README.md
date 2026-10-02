@@ -1,70 +1,49 @@
 # LeetCode Solutions
 
-![LeetCode](https://leetcode.com/static/images/LeetCode_Sharing.png)
+My solutions to [LeetCode](https://leetcode.com) problems, organized by common interview patterns.
 
-This repository contains my solutions to problems from LeetCode. All solutions are written in various programming languages and come with detailed explanations.
+Primary language: **TypeScript**
 
-## Table of Contents
+## Study Path
 
-- [About](#about)
-- [How to Use](#how-to-use)
-- [Languages](#languages)
-- [Contributing](#contributing)
-- [License](#license)
+11 topics, ~5 problems each — Easy through Hard. Suggested order is top to bottom.
 
-## About
+| # | Topic | Key Ideas | Folder |
+|---|-------|-----------|--------|
+| 1 | [Two Pointers](problemset/Two-Pointers/) | left/right, sorted arrays, greedy movement | `Two-Pointers` |
+| 2 | [Sliding Window](problemset/Sliding-Window/) | variable window, validity condition | `Sliding-Window` |
+| 3 | [Hash Map / Hash Set](problemset/Hash-Map/) | decide what to store | `Hash-Map` |
+| 4 | [Stack / Monotonic Stack](problemset/Stack/) | parentheses, next greater, histogram | `Stack` |
+| 5 | [Binary Search](problemset/Binary-Search/) | classic search + binary search on answer | `Binary-Search` |
+| 6 | [Intervals](problemset/Intervals/) | merge, insert, overlapping | `Intervals` |
+| 7 | [Linked List](problemset/Linked-List/) | fast/slow pointers, `next` manipulation | `Linked-List` |
+| 8 | [Trees — DFS / BFS](problemset/Trees/) | tree recursion, level order | `Trees` |
+| 9 | [Heap / Priority Queue](problemset/Heap/) | min vs max heap, top-K | `Heap` |
+| 10 | [Graphs](problemset/Graphs/) | DFS, BFS, topological sort | `Graphs` |
+| 11 | [Dynamic Programming](problemset/Dynamic-Programming/) | subproblems, memo / tabulation | `Dynamic-Programming` |
 
-This repository is dedicated to collecting and sharing solutions to LeetCode problems. Each solution includes thorough explanations of the algorithms and methods used.
+## Repository Structure
 
-## How to Use
+```
+problemset/
+├── Two-Pointers/
+│   ├── README.md
+│   └── <number. Problem Title>/
+│       └── sol.ts
+├── Sliding-Window/
+├── Hash-Map/
+├── Stack/
+├── ...
+Study-Plans/
+└── 30 Days of JavaScript/
+```
 
-1. Clone this repository:
+Each problem lives under its topic folder, with the solution in `sol.ts`.
 
-    ```sh
-    git clone https://github.com/username/leetcode-solutions.git
-    ```
+## Study Plans
 
-2. Navigate to the repository directory:
-
-    ```sh
-    cd leetcode-solutions
-    ```
-
-3. Browse to the directory of the specific problem you are interested in and review the code.
-
-## Languages
-
-Solutions are provided in various programming languages including, but not limited to:
-
-- Python
-- Java
-- C++
-  
-## Contributing
-
-If you would like to contribute, please follow these steps:
-
-1. Fork this repository.
-2. Create a new branch for your changes:
-
-    ```sh
-    git checkout -b feature/new-solution
-    ```
-
-3. Make your changes and commit them:
-
-    ```sh
-    git commit -m 'Add new solution for problem X'
-    ```
-
-4. Push your branch to your forked repository:
-
-    ```sh
-    git push origin feature/new-solution
-    ```
-
-5. Open a Pull Request.
+- [30 Days of JavaScript](Study-Plans/30%20Days%20of%20JavaScript/)
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the [MIT License](LICENSE).
