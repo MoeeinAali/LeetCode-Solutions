@@ -8,19 +8,19 @@ Primary language: **TypeScript**
 
 11 topics, ~5 problems each — Easy through Hard. Suggested order is top to bottom.
 
-| # | Topic | Key Ideas | Folder |
-|---|-------|-----------|--------|
-| 1 | [Two Pointers](problemset/Two-Pointers/) | left/right, sorted arrays, greedy movement | `Two-Pointers` |
-| 2 | [Sliding Window](problemset/Sliding-Window/) | variable window, validity condition | `Sliding-Window` |
-| 3 | [Hash Map / Hash Set](problemset/Hash-Map/) | decide what to store | `Hash-Map` |
-| 4 | [Stack / Monotonic Stack](problemset/Stack/) | parentheses, next greater, histogram | `Stack` |
-| 5 | [Binary Search](problemset/Binary-Search/) | classic search + binary search on answer | `Binary-Search` |
-| 6 | [Intervals](problemset/Intervals/) | merge, insert, overlapping | `Intervals` |
-| 7 | [Linked List](problemset/Linked-List/) | fast/slow pointers, `next` manipulation | `Linked-List` |
-| 8 | [Trees — DFS / BFS](problemset/Trees/) | tree recursion, level order | `Trees` |
-| 9 | [Heap / Priority Queue](problemset/Heap/) | min vs max heap, top-K | `Heap` |
-| 10 | [Graphs](problemset/Graphs/) | DFS, BFS, topological sort | `Graphs` |
-| 11 | [Dynamic Programming](problemset/Dynamic-Programming/) | subproblems, memo / tabulation | `Dynamic-Programming` |
+| # | Topic | Progress | Key Ideas | Folder |
+|---|-------|----------|-----------|--------|
+| 1 | [Two Pointers](problemset/Two-Pointers/) | 5/5 | left/right, sorted arrays, greedy movement | `Two-Pointers` |
+| 2 | [Sliding Window](problemset/Sliding-Window/) | 4/5 | variable window, validity condition | `Sliding-Window` |
+| 3 | [Hash Map / Hash Set](problemset/Hash-Map/) | 5/5 | decide what to store | `Hash-Map` |
+| 4 | [Stack / Monotonic Stack](problemset/Stack/) | 5/5 | parentheses, next greater, histogram | `Stack` |
+| 5 | [Binary Search](problemset/Binary-Search/) | 4/5 | classic search + binary search on answer | `Binary-Search` |
+| 6 | [Intervals](problemset/Intervals/) | 0/5 | merge, insert, overlapping | `Intervals` |
+| 7 | [Linked List](problemset/Linked-List/) | 0/5 | fast/slow pointers, `next` manipulation | `Linked-List` |
+| 8 | [Trees — DFS / BFS](problemset/Trees/) | 0/5 | tree recursion, level order | `Trees` |
+| 9 | [Heap / Priority Queue](problemset/Heap/) | 0/5 | min vs max heap, top-K | `Heap` |
+| 10 | [Graphs](problemset/Graphs/) | 0/5 | DFS, BFS, topological sort | `Graphs` |
+| 11 | [Dynamic Programming](problemset/Dynamic-Programming/) | 5/5 | subproblems, memo / tabulation | `Dynamic-Programming` |
 
 ## Repository Structure
 
