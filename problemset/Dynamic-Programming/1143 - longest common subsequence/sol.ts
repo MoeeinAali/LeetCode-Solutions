@@ -1,5 +1,3 @@
-
-
 function longestCommonSubsequence(text1: string, text2: string): number {
   const m = text1.length;
   const n = text2.length;
