@@ -18,17 +18,13 @@ type TreeNode = {
   right: TreeNode | null;
 };
 
-function maxPathSum(root: TreeNode | null): number {
-  let maxSum = -Infinity;
+function isValidBST(root: TreeNode | null): boolean {
+  function dfs(node: TreeNode | null, min: number, max: number): boolean {
+    if (!node) return true;
 
-  function dfs(node: TreeNode | null): number {
-    if (!node) return 0;
-    const left = Math.max(0, dfs(node.left));
-    const right = Math.max(0, dfs(node.right));
-    const pathSum = node.val + left + right;
-    maxSum = Math.max(maxSum, pathSum);
-    return node.val + Math.max(left, right);
+    if (node.val <= min || node.val >= max) return false;
+
+    return dfs(node.left, min, node.val) && dfs(node.right, node.val, max);
   }
-  dfs(root);
-  return maxSum;
+  return dfs(root, -Infinity, Infinity);
 }
