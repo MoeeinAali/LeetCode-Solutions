@@ -6,7 +6,7 @@ Primary language: **TypeScript**
 
 ## Study Path
 
-14 topics. Suggested order is top to bottom. Progress = solved / listed problems.
+15 topics. Suggested order is top to bottom. Progress = solved / listed problems.
 
 | # | Topic | Progress | Key Ideas | Folder |
 |---|-------|----------|-----------|--------|
@@ -24,6 +24,7 @@ Primary language: **TypeScript**
 | 12 | [Backtracking](problemset/Backtracking/) | 0/5 | choose / explore / un-choose | `Backtracking` |
 | 13 | [Trie](problemset/Trie/) | 0/3 | prefix tree, wildcard DFS | `Trie` |
 | 14 | [Greedy / Kadane](problemset/Greedy/) | 0/5 | local choice, running best | `Greedy` |
+| 15 | [Strings](problemset/Strings/) | 0/7 | char counts, two pointers, stack | `Strings` |
 
 ## Repository Structure
 
@@ -39,6 +40,7 @@ problemset/
 ├── Backtracking/
 ├── Trie/
 ├── Greedy/
+├── Strings/
 ├── ...
 Study-Plans/
 └── 30 Days of JavaScript/
