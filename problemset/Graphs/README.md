@@ -19,6 +19,10 @@ Graph traversal with DFS and BFS, then patterns like topological sort.
 | 3 | 133 — Clone Graph | Medium | [LeetCode](https://leetcode.com/problems/clone-graph/) |
 | 4 | 207 — Course Schedule | Medium | [LeetCode](https://leetcode.com/problems/course-schedule/) |
 | 5 | 127 — Word Ladder | Hard | [LeetCode](https://leetcode.com/problems/word-ladder/) |
+| 6 | 695 — Max Area of Island | Medium | [LeetCode](https://leetcode.com/problems/max-area-of-island/) |
+| 7 | 994 — Rotting Oranges | Medium | [LeetCode](https://leetcode.com/problems/rotting-oranges/) |
+| 8 | 210 — Course Schedule II | Medium | [LeetCode](https://leetcode.com/problems/course-schedule-ii/) |
+| 9 | 684 — Redundant Connection | Medium | [LeetCode](https://leetcode.com/problems/redundant-connection/) |
 
 ## Solution notes
 
@@ -69,6 +73,46 @@ Graph traversal with DFS and BFS, then patterns like topological sort.
 **Approach:** BFS from `beginWord`; each step tries all one-letter mutations that exist in the word set. First time you reach `endWord`, that level is the shortest length. Remove used words from the set to avoid revisits. Bidirectional BFS is a common optimization.
 
 **Complexity:** O(n · L · 26) roughly (n = dict size, L = word length), O(n) space.
+
+---
+
+### 695 — Max Area of Island
+
+**Problem:** Largest area of a 4-connected island in a binary grid.
+
+**Approach:** Same flood fill as 200, but DFS returns the size of the component (`1 + dfs(neighbors)`); keep the max.
+
+**Complexity:** O(m · n) time, O(m · n) worst-case space.
+
+---
+
+### 994 — Rotting Oranges
+
+**Problem:** Minutes until all fresh oranges rot (rot spreads each minute to 4 neighbors), or -1.
+
+**Approach:** Multi-source BFS: enqueue all rotten oranges, process level by level (one level = one minute), count fresh oranges left. If any fresh remain, return -1.
+
+**Complexity:** O(m · n) time and space.
+
+---
+
+### 210 — Course Schedule II
+
+**Problem:** Return a valid course order, or an empty array if there is a cycle.
+
+**Approach:** Same as 207 (Kahn's algorithm), but record nodes in the order they are dequeued. If the order has fewer than `n` nodes, there is a cycle.
+
+**Complexity:** O(n + e) time and space.
+
+---
+
+### 684 — Redundant Connection
+
+**Problem:** A tree plus one extra edge. Return the edge that can be removed to restore the tree.
+
+**Approach:** Union-Find: for each edge, if both endpoints already share a root, that edge closes the cycle and is the answer; otherwise union them. Use path compression + union by rank.
+
+**Complexity:** O(n · α(n)) time, O(n) space.
 
 ## Learning Order
 

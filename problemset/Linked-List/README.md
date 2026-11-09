@@ -18,6 +18,8 @@ Pointer (`next`) manipulation and traversal patterns — no random access, every
 | 3 | 141 — Linked List Cycle | Easy | [LeetCode](https://leetcode.com/problems/linked-list-cycle/) |
 | 4 | 143 — Reorder List | Medium | [LeetCode](https://leetcode.com/problems/reorder-list/) |
 | 5 | 23 — Merge k Sorted Lists | Hard | [LeetCode](https://leetcode.com/problems/merge-k-sorted-lists/) |
+| 6 | 19 — Remove Nth Node From End of List | Medium | [LeetCode](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) |
+| 7 | 2 — Add Two Numbers | Medium | [LeetCode](https://leetcode.com/problems/add-two-numbers/) |
 
 ## Solution notes
 
@@ -68,6 +70,26 @@ Pointer (`next`) manipulation and traversal patterns — no random access, every
 **Approach:** Min-heap (priority queue) of current heads keyed by value. Pop smallest, append to result, push that node’s `next` if any. Alternative: divide-and-conquer pairwise merge (like merge sort).
 
 **Complexity:** O(N log k) time with heap (N = total nodes), O(k) heap space.
+
+---
+
+### 19 — Remove Nth Node From End of List
+
+**Problem:** Remove the n-th node from the end in one pass.
+
+**Approach:** Dummy head; move `fast` n steps ahead, then move `fast` and `slow` together until `fast.next` is null. `slow.next = slow.next.next`.
+
+**Complexity:** O(n) time, O(1) space.
+
+---
+
+### 2 — Add Two Numbers
+
+**Problem:** Two non-negative numbers stored as reversed digit lists. Return their sum as a list.
+
+**Approach:** Walk both lists with a `carry`. At each step `sum = a + b + carry`, append `sum % 10`, carry = `floor(sum / 10)`. Continue while either list or carry remains.
+
+**Complexity:** O(max(n, m)) time, O(1) extra space.
 
 ## Tip
 

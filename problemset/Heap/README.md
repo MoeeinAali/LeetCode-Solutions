@@ -18,6 +18,7 @@ A data structure that always exposes the smallest or largest element in O(log n)
 | 3 | 347 — Top K Frequent Elements | Medium | [LeetCode](https://leetcode.com/problems/top-k-frequent-elements/) · also in [Hash-Map](../Hash-Map/) |
 | 4 | 973 — K Closest Points to Origin | Medium | [LeetCode](https://leetcode.com/problems/k-closest-points-to-origin/) |
 | 5 | 295 — Find Median from Data Stream | Hard | [LeetCode](https://leetcode.com/problems/find-median-from-data-stream/) |
+| 6 | 621 — Task Scheduler | Medium | [LeetCode](https://leetcode.com/problems/task-scheduler/) |
 
 ## Solution notes
 
@@ -68,6 +69,16 @@ A data structure that always exposes the smallest or largest element in O(log n)
 **Approach:** Two heaps — max-heap for the lower half, min-heap for the upper half. Keep sizes balanced (`|lower| - |upper| ≤ 1`). Median is top of lower (odd) or average of both tops (even).
 
 **Complexity:** O(log n) insert, O(1) median, O(n) space.
+
+---
+
+### 621 — Task Scheduler
+
+**Problem:** Tasks with a cooldown `n` between identical tasks. Minimum number of intervals to finish them all.
+
+**Approach:** Count frequencies. Greedy formula: `(maxFreq - 1) * (n + 1) + countOfTasksWithMaxFreq`, lower-bounded by `tasks.length`. Heap simulation (always run the most frequent available task) also works.
+
+**Complexity:** O(n) time with formula, O(1) space.
 
 ## Tip
 

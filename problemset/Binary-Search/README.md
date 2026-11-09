@@ -18,6 +18,8 @@ Binary search over a sorted space — not only finding an element in an array, b
 | 3 | 33 — Search in Rotated Sorted Array | Medium | [LeetCode](https://leetcode.com/problems/search-in-rotated-sorted-array/) · [sol](33%20—%20Search%20in%20Rotated%20Sorted%20Array/) |
 | 4 | 153 — Find Minimum in Rotated Sorted Array | Medium | [LeetCode](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) · [sol](153%20—%20Find%20Minimum%20in%20Rotated%20Sorted%20Array/) |
 | 5 | 875 — Koko Eating Bananas | Medium | [LeetCode](https://leetcode.com/problems/koko-eating-bananas/) |
+| 6 | 74 — Search a 2D Matrix | Medium | [LeetCode](https://leetcode.com/problems/search-a-2d-matrix/) |
+| 7 | 4 — Median of Two Sorted Arrays | Hard | [LeetCode](https://leetcode.com/problems/median-of-two-sorted-arrays/) |
 
 ## Solution notes
 
@@ -68,6 +70,26 @@ Binary search over a sorted space — not only finding an element in an array, b
 **Approach:** Binary search on answer. Search `k` in `[1, max(piles)]`. Feasibility: hours needed = `sum(ceil(pile / k)) ≤ h`. If feasible, try smaller `k` (`right = mid`); else `left = mid + 1`.
 
 **Complexity:** O(n log M) time (M = max pile), O(1) space.
+
+---
+
+### 74 — Search a 2D Matrix
+
+**Problem:** Rows are sorted and each row starts after the previous row ends. Is `target` in the matrix?
+
+**Approach:** Treat the matrix as one sorted array of `m·n` elements: `mid → matrix[floor(mid / n)][mid % n]` and binary search normally.
+
+**Complexity:** O(log(m · n)) time, O(1) space.
+
+---
+
+### 4 — Median of Two Sorted Arrays
+
+**Problem:** Median of two sorted arrays in O(log(min(m, n))).
+
+**Approach:** Binary search the partition of the smaller array. A partition is correct when `maxLeftA <= minRightB` and `maxLeftB <= minRightA`; then the median comes from those four values.
+
+**Complexity:** O(log(min(m, n))) time, O(1) space.
 
 ## Tip
 

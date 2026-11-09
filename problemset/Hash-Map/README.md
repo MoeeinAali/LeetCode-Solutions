@@ -19,6 +19,8 @@ Hardness matters less here than deciding **what to store** in the map/set:
 | 3 | 49 — Group Anagrams | Medium | [LeetCode](https://leetcode.com/problems/group-anagrams/) · [sol](49.%20Group%20Anagrams/) |
 | 4 | 347 — Top K Frequent Elements | Medium | [LeetCode](https://leetcode.com/problems/top-k-frequent-elements/) · [sol](347.%20Top%20K%20Frequent%20Elements/) |
 | 5 | 128 — Longest Consecutive Sequence | Medium | [LeetCode](https://leetcode.com/problems/longest-consecutive-sequence/) · [sol](128.%20Longest%20Consecutive%20Sequence/) |
+| 6 | 560 — Subarray Sum Equals K | Medium | [LeetCode](https://leetcode.com/problems/subarray-sum-equals-k/) |
+| 7 | 238 — Product of Array Except Self | Medium | [LeetCode](https://leetcode.com/problems/product-of-array-except-self/) |
 
 ## Solution notes
 
@@ -69,6 +71,26 @@ Hardness matters less here than deciding **what to store** in the map/set:
 **Approach:** Put all numbers in a `Set`. For each `num`, only start counting if `num - 1` is **not** in the set (start of a chain). Then walk `num+1, num+2, ...` while in the set. Track global max length.
 
 **Complexity:** O(n) time, O(n) space.
+
+---
+
+### 560 — Subarray Sum Equals K
+
+**Problem:** Count contiguous subarrays whose sum equals `k` (values may be negative).
+
+**Approach:** Prefix sums + hash map of `prefixSum → count`. At each index, add `map[prefix - k]` to the answer, then record the current prefix. Initialise `map[0] = 1`.
+
+**Complexity:** O(n) time, O(n) space.
+
+---
+
+### 238 — Product of Array Except Self
+
+**Problem:** `answer[i]` = product of all elements except `nums[i]`, without division, in O(n).
+
+**Approach:** Two passes: left-to-right fills `answer[i]` with the product of everything to the left; right-to-left multiplies by the running product of everything to the right.
+
+**Complexity:** O(n) time, O(1) extra space (excluding output).
 
 ## Tip
 

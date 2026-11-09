@@ -24,6 +24,11 @@ Break a problem into overlapping subproblems and store answers so you do not rec
 | 9 | 300 — Longest Increasing Subsequence | Medium | [LeetCode](https://leetcode.com/problems/longest-increasing-subsequence/) · [sol](300%20—%20Longest%20Increasing%20Subsequence/) · [sol2](300%20—%20Longest%20Increasing%20Subsequence/sol2.ts) |
 | 10 | 416 — Partition Equal Subset Sum | Medium | [LeetCode](https://leetcode.com/problems/partition-equal-subset-sum/) · [sol](416%20—%20Partition%20Equal%20Subset%20Sum/) |
 | 11 | 72 — Edit Distance | Hard | [LeetCode](https://leetcode.com/problems/edit-distance/) · [sol](72%20—%20Edit%20Distance/) |
+| 12 | 1143 — Longest Common Subsequence | Medium | [LeetCode](https://leetcode.com/problems/longest-common-subsequence/) · [sol](1143%20-%20longest%20common%20subsequence/) |
+| 13 | 62 — Unique Paths | Medium | [LeetCode](https://leetcode.com/problems/unique-paths/) · [sol](62%20-%20unique%20paths/) |
+| 14 | 64 — Minimum Path Sum | Medium | [LeetCode](https://leetcode.com/problems/minimum-path-sum/) · [sol](64%20-%20Minimum%20Path%20Sum/) |
+| 15 | 152 — Maximum Product Subarray | Medium | [LeetCode](https://leetcode.com/problems/maximum-product-subarray/) |
+| 16 | 5 — Longest Palindromic Substring | Medium | [LeetCode](https://leetcode.com/problems/longest-palindromic-substring/) |
 
 ## Solution notes
 
@@ -138,6 +143,56 @@ Break a problem into overlapping subproblems and store answers so you do not rec
 **Approach:** 2D DP on prefixes. `dp[i][j]` = edit distance between first `i` chars of `word1` and first `j` of `word2`. Base: empty ↔ prefix costs = length. If chars match, `dp[i][j]=dp[i-1][j-1]`; else `1 + min(insert, delete, replace)` from neighbors.
 
 **Complexity:** O(m · n) time and space.
+
+---
+
+### 1143 — Longest Common Subsequence · [sol](1143%20-%20longest%20common%20subsequence/)
+
+**Problem:** Length of the longest subsequence common to two strings.
+
+**Approach:** `dp[i][j]` = LCS of the first `i` chars of `a` and first `j` of `b`. If chars match, `dp[i-1][j-1] + 1`; otherwise `max(dp[i-1][j], dp[i][j-1])`.
+
+**Complexity:** O(m · n) time, O(m · n) space (O(min(m, n)) with rolling rows).
+
+---
+
+### 62 — Unique Paths · [sol](62%20-%20unique%20paths/)
+
+**Problem:** Robot on an `m × n` grid moves only right or down. Count paths from top-left to bottom-right.
+
+**Approach:** `dp[i][j] = dp[i-1][j] + dp[i][j-1]`, first row and column are 1. Can be compressed to one row.
+
+**Complexity:** O(m · n) time, O(n) space.
+
+---
+
+### 64 — Minimum Path Sum · [sol](64%20-%20Minimum%20Path%20Sum/)
+
+**Problem:** Minimum sum path from top-left to bottom-right moving only right or down.
+
+**Approach:** `dp[i][j] = grid[i][j] + min(dp[i-1][j], dp[i][j-1])`; handle the first row and column separately.
+
+**Complexity:** O(m · n) time, O(1) extra space if done in place.
+
+---
+
+### 152 — Maximum Product Subarray
+
+**Problem:** Largest product of a contiguous subarray.
+
+**Approach:** Track both the max and min product ending at each index (a negative number swaps them). `curMax = max(x, x·prevMax, x·prevMin)`, `curMin` likewise. Answer is the best `curMax`.
+
+**Complexity:** O(n) time, O(1) space.
+
+---
+
+### 5 — Longest Palindromic Substring
+
+**Problem:** Return the longest palindromic substring of `s`.
+
+**Approach:** Expand around each center (n odd centers + n−1 even centers) while chars match. Simpler than 2D DP and O(1) space.
+
+**Complexity:** O(n²) time, O(1) space.
 
 ## Tip
 
