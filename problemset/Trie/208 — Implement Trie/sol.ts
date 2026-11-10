@@ -1,60 +1,59 @@
-
 class TrieNode {
-    children: Map<string, TrieNode>;
-    isEnd: boolean;
+  children: Map<string, TrieNode>;
+  isEnd: boolean;
 
-    constructor() {
-        this.children = new Map();
-        this.isEnd = false;
-    }
+  constructor() {
+    this.children = new Map();
+    this.isEnd = false;
+  }
 }
 
 class Trie {
-    private root: TrieNode;
+  private root: TrieNode;
 
-    constructor() {
-        this.root = new TrieNode();
+  constructor() {
+    this.root = new TrieNode();
+  }
+
+  insert(word: string): void {
+    let node = this.root;
+
+    for (const char of word) {
+      if (!node.children.has(char)) {
+        node.children.set(char, new TrieNode());
+      }
+
+      node = node.children.get(char)!;
     }
 
-    insert(word: string): void {
-        let node = this.root;
+    node.isEnd = true;
+  }
 
-        for (const char of word) {
-            if (!node.children.has(char)) {
-                node.children.set(char, new TrieNode());
-            }
+  search(word: string): boolean {
+    let node = this.root;
 
-            node = node.children.get(char)!;
-        }
+    for (const char of word) {
+      if (!node.children.has(char)) {
+        return false;
+      }
 
-        node.isEnd = true;
+      node = node.children.get(char)!;
     }
 
-    search(word: string): boolean {
-        let node = this.root;
+    return node.isEnd;
+  }
 
-        for (const char of word) {
-            if (!node.children.has(char)) {
-                return false;
-            }
+  startsWith(prefix: string): boolean {
+    let node = this.root;
 
-            node = node.children.get(char)!;
-        }
+    for (const char of prefix) {
+      if (!node.children.has(char)) {
+        return false;
+      }
 
-        return node.isEnd;
+      node = node.children.get(char)!;
     }
 
-    startsWith(prefix: string): boolean {
-        let node = this.root;
-
-        for (const char of prefix) {
-            if (!node.children.has(char)) {
-                return false;
-            }
-
-            node = node.children.get(char)!;
-        }
-
-        return true;
-    }
+    return true;
+  }
 }
